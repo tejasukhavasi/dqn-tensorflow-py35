@@ -74,7 +74,7 @@ class GymEnvironment(Environment):
     cumulated_reward = 0
     start_lives = self.lives
 
-    for _ in xrange(self.action_repeat):
+    for _ in range(self.action_repeat):
       self._step(action)
       cumulated_reward = cumulated_reward + self.reward
 
