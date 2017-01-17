@@ -9,10 +9,7 @@ from .base import BaseModel
 from .history import History
 from .replay_memory import ReplayMemory
 from .ops import linear, conv2d, clipped_error
-import sys
-currdir = os.path.join(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(currdir)
-from utils import get_time, save_pkl, load_pkl
+from .utils import get_time, save_pkl, load_pkl
 from functools import reduce
 
 class Agent(BaseModel):

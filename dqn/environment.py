@@ -1,11 +1,7 @@
 import gym
 import random
 import numpy as np
-import sys
-import os
-currdir = os.path.join(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(currdir)
-from utils import rgb2gray, imresize
+from .utils import rgb2gray, imresize
 
 class Environment(object):
   def __init__(self, config):
