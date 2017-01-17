@@ -5,6 +5,9 @@ import random
 import logging
 import numpy as np
 
+import sys
+currdir = os.path.join(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(currdir)
 from utils import save_npy, load_npy
 
 class ReplayMemory:

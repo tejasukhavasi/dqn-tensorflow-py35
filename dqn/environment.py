@@ -1,6 +1,10 @@
 import gym
 import random
 import numpy as np
+import sys
+import os
+currdir = os.path.join(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(currdir)
 from utils import rgb2gray, imresize
 
 class Environment(object):
@@ -26,7 +30,7 @@ class Environment(object):
 
   def new_random_game(self):
     self.new_game(True)
-    for _ in xrange(random.randint(0, self.random_start - 1)):
+    for _ in range(random.randint(0, self.random_start - 1)):
       self._step(0)
     self.render()
     return self.screen, 0, 0, self.terminal
